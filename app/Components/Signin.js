@@ -20,6 +20,7 @@ export default  function SigninForm() {
     e.preventDefault();
     if (!name  || !email || !password) {
       setError("All fields are required");
+      return;
     }
     try {
 
@@ -53,10 +54,10 @@ export default  function SigninForm() {
         form.reset();
         router.push("/")
       } else {
-        console.log("User registration failed");
+        console.log("User registration failed.");
       }
     } catch (error) {
-      console.log("Error durig registration", error);
+      console.log("Error durig registration:", error);
     }
   };
 

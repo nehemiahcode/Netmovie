@@ -1,6 +1,6 @@
 import "./globals.css";
 import Themeprovider from "./Components/Themeprovider";
-import { AuthProvider } from "./Components/layout";
+import { AuthProvider } from "./Providers";
 export const metadata = {
   title: "Netmoves.net",
   description: "Stream out your stress. ",

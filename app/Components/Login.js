@@ -41,6 +41,7 @@ export default function LoginForm() {
 
   return (
     <div className="main h-[100%] w-[100%]  flex items-center  justify-center">
+   
       <form
         onSubmit={handleSubmit}
         className=" relative bg-[rgba(0,0,0,0.9)] w-[95%] shadow-2xl sm:w-[80%] rounded-md py-10 lg:w-[40%] px-4 md:w-[50%] flex flex-col gap-4 justify-center mx-auto"

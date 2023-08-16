@@ -1,14 +1,9 @@
 "use client";
 import Navbar from "../Components/Navbar";
 import { useEffect } from "react";
-import { useSession, signOut } from "next-auth/react";
+
 
 export default function Home() {
-  const { data: session } = useSession();
-
-  const handleSignOut = async () => {
-    await signOut(); // Make sure to await the signOut function call
-  };
 
   //this code fires anytime you are on this page to make you be at the top always.
   useEffect(() => {
@@ -23,26 +18,11 @@ export default function Home() {
           Unlimited movies, TV shows, and <br className="hidden lg:flex" /> more
         </h1>
         <p className="text-lg px-5 pt-5 font-medium">
-          {/* Watch anywhere. Cancel anytime. */}
-          Name: {session?.user?.name}
+          Download anywhere. Cancel anytime.
         </p>
         <p className="text-xl pt-3 px-5  font-medium">
-          {/* Enjoy our intresting tv shows in a place convienent to you.. */}
-          Email: {session?.user?.email}
+          Enjoy our intresting tv shows in a place convienent to you..
         </p>
-
-        <div>
-          {session ? (
-            <button
-              className=" bg-red-600 rounded px-5 py-1 h-[40px]  text-white"
-              onClick={handleSignOut}
-            >
-              Sign Out
-            </button>
-          ) : (
-            ""
-          )}
-        </div>
       </div>
     </div>
   );
