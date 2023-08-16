@@ -1,7 +1,8 @@
-import LoginForm from "./Components/Login"
+import SigninForm from "../Components/Signin";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
-import { authOp } from "./api/auth/[...nextauth]/route";
+import { authOp } from "../api/auth/[...nextauth]/route";
+
 
 export default async function SigninPage() {
 
@@ -11,7 +12,7 @@ export default async function SigninPage() {
   }
   return (
     <main>
-       <LoginForm/>
+         <SigninForm/>
     </main>
   )
 }
